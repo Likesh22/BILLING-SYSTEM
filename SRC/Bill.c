@@ -9,7 +9,7 @@
 static void print_item_row(int no, const char *name, int qty_ml, float rate, int pcs,
                            float amount, float sgst, float cgst, float total)
 {
-    printf("%-4d | %-16s | %-7d | %-6.2f | %-3d | %-8.2f | %-8.2f | %-8.2f | %-9.2f\n",
+    printf("%-4d | %-16s | %-7d | %-10.2f | %-5d | %-12.2f | %-10.2f | %-10.2f | %-14.2f |\n",
            no, name, qty_ml, rate, pcs, amount, sgst, cgst, total);
 }
 
@@ -17,9 +17,15 @@ void Bill(const char *type) {
     float gst_total = 0.0f;
     float grand_total = 0.0f;
 
-    printf("\nNo.  | %-16s | %-7s | %-6s | %-3s | %-8s | %-8s | %-8s | %-9s\n",
+    printf("----------------------------------------------------------------------------------\n");
+    printf("Buyer Name: %s \tBuyer Phone Number: %lld\n", buyer_name,buyer_phone);
+    printf("Buyer Address: %s\tMode of payment: %s\n", buyer_address, mode_of_payment);
+    printf("----------------------------------------------------------------------------------\n");
+
+
+    printf("\nNo.  | %-16s | %-7s | %-10s | %-5s | %-12s | %-10s | %-10s | %-14s |\n",
            "Product Name", "Qty(ml)", "Rate", "Qty", "Amount", "SGST", "CGST", "Total");
-    printf("-----+------------------+---------+--------+-----+----------+----------+----------+-----------\n");
+    printf("-----+------------------+--------------+-----------+-----+-------------+-------------+---------------+-----------\n");
 
     for (int i = 0; i < n; i++) {
         float sgst, cgst, line_total;
@@ -41,7 +47,7 @@ void Bill(const char *type) {
     }
 
     printf("-----+------------------+---------+--------+-----+----------+----------+----------+-----------\n");
-    printf("| Total GST paid: %.2f |\n", gst_total);
-    printf("| Amount to be paid without GST: %.2f |\n", grand_total - gst_total);
-    printf("| Total Amount to be paid: %.2f |\n", grand_total);
+    printf("\t| Total GST paid:                \t%.2f |\n", gst_total);
+    printf("\t| Amount to be paid without GST: \t%.2f |\n", grand_total - gst_total);
+    printf("\t| Total Amount to be paid:       \t%.2f |\n", grand_total);
 }

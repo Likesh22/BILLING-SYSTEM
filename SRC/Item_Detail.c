@@ -10,7 +10,7 @@ void Item_Detail(const char *type){
     extern struct Items item[100];
     printf("\tNumber of items: ");
     scanf("%d", &n);
-    printf("------------------------------------------------------------------------\n");
+    printf("----------------------------------------------------------------------------------\n");
 if (strcmp(type, "P") == 0 || strcmp(type, "p") == 0)
 {
     for(i=0; i<n; i++)
@@ -24,7 +24,7 @@ if (strcmp(type, "P") == 0 || strcmp(type, "p") == 0)
         printf("    No of items: ");
         scanf("%d", &item[i].no_of_items);
         item[i].amount = item[i].no_of_items * item[i].rate;
-        printf("------------------------------------------------------------------------\n");
+        printf("----------------------------------------------------------------------------------\n");
 
         // Psgst = (item[i].amount * 9) / 100;
         // printf("    Sgst: %.2f\n", Psgst);
@@ -52,7 +52,7 @@ else if (strcmp(type, "F") == 0 || strcmp(type, "f") == 0)
         scanf("%d", &item[i].no_of_items);
 
         item[i].amount = item[i].no_of_items * item[i].rate;
-        printf("------------------------------------------------------------------------\n");
+        printf("----------------------------------------------------------------------------------\n");
 
         // Fsgst = (item[i].amount * 2.5) / 100;
         // printf("    Sgst: %.2f\n", Fsgst);

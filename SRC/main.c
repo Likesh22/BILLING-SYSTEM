@@ -24,9 +24,11 @@ int i;
 int main ()
 {
 char type[20];
-printf("Type of bill");
-printf(" (P for Pesticides and F for Fertilizers) : ");
+printf("Type of bill\n");
+printf("|P for Pesticides and F for Fertilizers| : ");
 scanf("%s", type);
+
+printf("\n");
 
 int bill_no;
 printf("Bill no: ");
@@ -72,7 +74,7 @@ Item_Detail(type);
 //         printf("    No of items: ");
 //         scanf("%d", &item[i].no_of_items);
 //         item[i].amount = item[i].no_of_items * item[i].rate;
-//         printf("------------------------------------------------------------------------\n");
+//         printf("----------------------------------------------------------------------------------\n");
 
 //         Psgst = (item[i].amount * 9) / 100;
 //         printf("    Sgst: %.2f\n", Psgst);
@@ -103,7 +105,7 @@ Item_Detail(type);
 //         scanf("%d", &item[i].no_of_items);
 
 //         item[i].amount = item[i].no_of_items * item[i].rate;
-//         printf("------------------------------------------------------------------------\n");
+//         printf("----------------------------------------------------------------------------------\n");
 
 //         Fsgst = (item[i].amount * 2.5) / 100;
 //         printf("    Sgst: %.2f\n", Fsgst);
@@ -113,7 +115,7 @@ Item_Detail(type);
 
 //         FAmount= item[i].amount + Fsgst + Fcgst;
 //         printf("    Amount: %.2f\n", FAmount);
-//         printf("------------------------------------------------------------------------\n");
+//         printf("----------------------------------------------------------------------------------\n");
 //         Ftotal_amount += FAmount;
 
 //     }
@@ -123,32 +125,32 @@ Item_Detail(type);
 // printf("------------------------------------------------------------------------\n");
 // printf("| Total GST paid: %.2f |\n", (strcmp(type, "P") == 0) ? Pgst : Fgst);
 // printf("| Total Amount to be paid: %.2f |\n", (strcmp(type, "P") == 0) ? Ptotal_amount : Ftotal_amount);
-   
-    printf("------------------------------------------------------------------------\n");
+    printf("\n");
+    printf("----------------------------------------------------------------------------------\n");
     printf("\n");
     printf("                    Company Name: AgroMart\n");
     printf("\n");
     printf("        GSTIN: XXXXXXXXXX           Mobile No: XXXXXXXXXX\n");
     printf("        Date: %s           Time: %s\n", __DATE__, __TIME__);
-    printf("------------------------------------------------------------------------\n");
+    printf("----------------------------------------------------------------------------------\n");
     printf("                        TAX INVOICE / BILL OF SUPPLY\n");
     printf("\n");
-    printf("Bill no: %d\n", bill_no);
-
+    
     if (strcmp(type, "P") == 0 || strcmp(type, "p") == 0)
     {
-    printf("\t\t\tPesticides licence No: XXXXXXX\n");
+        printf("\t\t\tPesticides licence No: XXXXXXX\n");
     }
     else
     {
-    printf("\t\t\tFertilizers licence No: YYYYYYYY\n");
+        printf("\t\t\tFertilizers licence No: YYYYYYYY\n");
     }
-    printf("------------------------------------------------------------------------\n");
+    printf("Bill no: %d\n", bill_no);
+    printf("----------------------------------------------------------------------------------\n");
     
     Bill(type);
     
-    printf("------------------------------------------------------------------------\n");
-    printf("Signature of Receiver:_______________\t Signature of Seller:_______________");
+    printf("----------------------------------------------------------------------------------\n");
+    printf("Signature of Receiver:__________`_____\t Signature of Seller:_______________");
     printf("\n");
     printf("Thank you for shopping with us!\n");
     return 0;
