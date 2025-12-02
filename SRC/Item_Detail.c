@@ -2,8 +2,11 @@
 #include<stdlib.h>
 #include<string.h>
 #include"../include/Item_Detail.h"
-#include"../include/structure.h"
-#include"../include/bill.h"
+#include"../include/Structure.h"
+#include"../include/Bill.h"
+#include"../include/Buyer_Detail.h"
+#include"../include/Bill_No.h"
+#include"../include/Storage.h"
 
 void Item_Detail(const char *type){
     extern int n, i;

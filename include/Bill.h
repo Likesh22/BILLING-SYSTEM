@@ -1,6 +1,6 @@
 #ifndef Bill_H
 #define Bill_H
 
-void Bill(const char *type);
+void Bill(FILE *out, const char *type, int Bill_No);
 
 #endif

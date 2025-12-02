@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"../include/buyer.h"
+#include"../include/Buyer_Detail.h"
 #include"../include/Item_Detail.h"
 
 char buyer_name[50];
