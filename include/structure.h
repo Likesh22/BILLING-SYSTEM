@@ -16,5 +16,5 @@ extern float Psgst ,Pcgst ,Pgst ,PAmount ,Ptotal_amount;
 extern struct Items item[100];
 extern int n;
 extern int i;
-
+extern int bill_no;
 #endif
