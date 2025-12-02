@@ -45,7 +45,7 @@ else if (strcmp(type, "F") == 0 || strcmp(type, "f") == 0)
     for(i=0; i<n; i++)
     {
         printf("%d. Product name: ", i+1);
-        scanf("%s", item[i].product_name);
+        scanf("%s", &item[i].product_name);
         printf("    Quantity(in ml): ");
         scanf("%d", &item[i].quantity);
         printf("    Rate: ");
