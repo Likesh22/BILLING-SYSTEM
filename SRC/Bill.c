@@ -30,11 +30,11 @@ void Bill(FILE *out, const char *type, int Bill_No) {
     
     if (strcmp(type, "P") == 0 || strcmp(type, "p") == 0)
     {
-        fprintf(out,"\t\t\t\t\tPesticides licence No: XXXXXXX\n");
+        fprintf(out,"\t\t\t\t\t\tPesticides licence No: XXXXXXX\n");
     }
     else
     {
-        fprintf(out,"\t\t\t\t\tFertilizers licence No: YYYYYYYY\n");
+        fprintf(out,"\t\t\t\t\t\tFertilizers licence No: YYYYYYYY\n");
     }
     fprintf(out,"Bill no: %d\n", Bill_No);
 
